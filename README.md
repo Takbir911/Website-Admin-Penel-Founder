@@ -1,52 +1,136 @@
-# Admin Route Discovery
+Website Admin Panel Finder
 
-A small Python command-line tool for discovering and classifying common website routes on websites you own or are explicitly authorized to test.
+A Python-based command-line tool for discovering common website routes on authorized targets.
 
-## Features
+Features
 
-- Checks a list of candidate routes on a target website.
-- Records HTTP status and basic page information.
-- Identifies generic login pages by checking for password fields.
-- Saves results to JSON and plain-text reports.
-- Includes request limits and basic handling for redirects, inaccessible routes, and rate limiting.
+- Discover common website routes.
+- Check HTTP status codes.
+- Identify basic login-page indicators.
+- Save results in JSON and TXT formats.
+- Compatible with Termux and Kali Linux.
 
-## Requirements
+---
 
-- Python 3.10 or newer recommended
-- `requests`
-- `beautifulsoup4`
+Installation Guide — Termux (Android)
 
-## Installation
+Step 1: Update Packages
 
-1. Clone or download this repository.
-2. Open a terminal in the project folder.
-3. Install dependencies:
+Run this command to refresh the package information.
 
-```bash
+pkg update
+
+Step 2: Install Required Packages
+
+Install Python and Git.
+
+pkg install python git -y
+
+Step 3: Download the Project
+
+Clone the repository from GitHub.
+
+git clone https://github.com/Takbir911/Website-Admin-Penel-Founder.git
+
+Step 4: Open the Project Directory
+
+Move into the downloaded project folder.
+
+cd Website-Admin-Penel-Founder
+
+Step 5: Install Python Dependencies
+
+Install the Python packages required by the project.
+
 python -m pip install -r requirements.txt
-```
 
-## Usage
+Step 6: Start the Tool
 
-Run the script:
+Launch the program.
 
-```bash
 python admin_penel.py
-```
 
-Enter the website URL when prompted, then confirm that you own the website or have permission to test it.
+---
 
-The tool writes these reports in the current directory:
+Installation Guide — Kali Linux
 
-- `admin_discovery_results.json`
-- `admin_discovery_results.txt`
+Step 1: Update the System Package List
 
-## Responsible use
+Refresh the available package information.
 
-Use this tool only on websites you own or where you have explicit authorization to perform testing. Do not use it to access restricted areas, bypass authentication, or disrupt services. Respect the website's terms, request limits, and any applicable laws.
+sudo apt update
 
-## Notes
+Step 2: Install Required Packages
 
-- This is a command-line Python script, not a hosted web application.
-- The script does not submit login credentials or attempt to bypass authentication.
-- HTTP status codes and page markers are indicators only; they do not prove that a route is a working admin panel.
+Install Python, the virtual environment module, pip, and Git.
+
+sudo apt install -y python3 python3-venv python3-pip git
+
+Step 3: Download the Project
+
+Clone the GitHub repository.
+
+git clone https://github.com/Takbir911/Website-Admin-Penel-Founder.git
+
+Step 4: Open the Project Directory
+
+Enter the downloaded project folder.
+
+cd Website-Admin-Penel-Founder
+
+Step 5: Create a Virtual Environment
+
+Create an isolated Python environment for the project.
+
+python3 -m venv .venv
+
+Step 6: Activate the Virtual Environment
+
+Activate the environment before installing dependencies.
+
+source .venv/bin/activate
+
+Step 7: Install Python Dependencies
+
+Install the packages listed in the requirements file.
+
+python -m pip install -r requirements.txt
+
+Step 8: Start the Tool
+
+Run the program.
+
+python admin_penel.py
+
+---
+
+Output Files
+
+After execution, the tool creates the following report files, as described by the program's implementation:
+
+- "admin_discovery_results.json"
+- "admin_discovery_results.txt"
+
+The files contain the results recorded by the tool.
+
+Important Notes
+
+Discovered routes and HTTP status codes are indicators only.
+
+A discovered route does not necessarily represent an administrative panel or a security vulnerability.
+
+Responsible Use
+
+Use this tool only on websites you own or have explicit permission to test.
+
+The tool does not submit credentials or bypass authentication.
+
+Respect the website owner's rules and stop testing if permission is withdrawn.
+
+Author
+
+GitHub Profile: https://github.com/Takbir911
+
+Repository
+
+https://github.com/Takbir911/Website-Admin-Penel-Founder
